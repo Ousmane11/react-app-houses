@@ -2,6 +2,8 @@ import React from "react";
 
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Assets from "./components/Assets";
+import Entities from "./components/Entities";
 
 function App() {
   return (
@@ -9,9 +11,9 @@ function App() {
       <header>
         <Navbar />
       </header>
-      <body>
-        <main></main>
-      </body>
+        <main>
+          <Assets/>
+        </main>
     </div>
   );
 }

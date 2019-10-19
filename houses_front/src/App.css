@@ -11,14 +11,19 @@
 
 header {
   border-bottom: 1px solid black;
+  height: 10vh;
 }
 
 nav {
   width: 90vw;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: auto 5vw
+}
+main{
+  height:90vh
 }
 
 button{
