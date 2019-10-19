@@ -16,6 +16,7 @@ class Assets extends Component {
           const theAssets = response.data
           this.setState({assets: theAssets})
       })
+      .catch(err => console.log(`There was an error`,err))
   }
 
   render(){

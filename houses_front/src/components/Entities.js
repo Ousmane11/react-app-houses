@@ -12,10 +12,11 @@ class Entities extends Component {
 
   componentDidMount(){
     this.service.getEntities()
-    .then( response => {
-        const theEntities = response.data
+    .then( response => { 
+      const theEntities = response.data
         this.setState({entities: theEntities})
     })
+    .catch(err => console.log(`There was an error`,err))
 }
 
 
