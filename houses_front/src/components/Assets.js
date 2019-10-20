@@ -24,7 +24,7 @@ class Assets extends Component {
     console.log(assets)
     return (
       <section>
-        <h1>Assets</h1>
+        <h2>Assets</h2>
         <div className='cards-box'>
           {assets && assets.map(elm => (
             <div className='card' key={elm.id}>

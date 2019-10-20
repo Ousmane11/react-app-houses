@@ -1,5 +1,6 @@
 import React from 'react'
 import '../App.css'
+import logo from '../home.svg'
 
 function Navbar() {
     return (
@@ -9,8 +10,8 @@ function Navbar() {
                 <h1>Houser</h1>
                 </div>
 
-                <div>
-                    <button>Hello there</button>
+                <div className='house'>
+                    <img src={logo} alt="house" />
                 </div>
             </nav>
         
