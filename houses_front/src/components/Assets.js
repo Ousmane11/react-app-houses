@@ -24,7 +24,7 @@ class Assets extends Component {
     return(
         
         <section>
-            <h1>Here comes the assets</h1>
+            <h1>Here come the assets</h1>
             <p>Somos los assets</p>
             <p>Somos los assets</p>
             {/* //Aquí irán los grid con los assets */}
