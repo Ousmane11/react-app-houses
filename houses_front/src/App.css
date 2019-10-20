@@ -30,13 +30,42 @@ button{
   width: 100px;
   height: 40px;
   padding: 7%;
-  border: 1px solid black;
+  border: 1px solid #222222;
   border-radius: 7px;
 }
 
 button:hover{
-  background-color: black;
+  background-color: #222222;
   color: white;
   font-size: 1em;
+  transition: 0.2s;
+}
+h1{
+  
+}
+ul{
+  list-style-type: none;
+  text-align: center;
+  padding-inline-start: 0px;
+}
+
+
+.cards-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.card{
+  width: 15vw;
+  border: 1px solid #222222;
+  border-radius: 7px;
+  margin: 1%;
+  padding:1%;
+}
+.card:hover{
+  background-color: #222222;
+  color: white;
   transition: 0.2s;
 }

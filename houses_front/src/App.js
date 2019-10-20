@@ -5,6 +5,7 @@ import "./App.css";
 import { Switch, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Assets from "./components/Assets"
+import Entities from "./components/Entities"
 
 
 
@@ -18,6 +19,7 @@ function App() {
         <main>
           <Switch>
             <Route exact path='/' component={Assets}/>
+            <Route exact path='/entities' component={Entities}/>
           </Switch>
         </main>
     </div>

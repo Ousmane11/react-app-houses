@@ -1,7 +1,6 @@
-import React, { Component } from "react"
-import "../App.css"
-import Services from "../services/Data.services"
-
+import React, { Component } from 'react'
+import '../App.css'
+import Services from '../services/Data.services'
 
 class Assets extends Component {
   constructor() {
@@ -10,25 +9,35 @@ class Assets extends Component {
     this.service = new Services()
   }
 
-  componentDidMount(){
-      this.service.getAssets()
-      .then( response => {
-          const theAssets = response.data
-          this.setState({assets: theAssets})
+  componentDidMount() {
+    this.service
+      .getAssets()
+      .then(response => {
+        const theAssets = response.data
+        this.setState({ assets: theAssets })
       })
-      .catch(err => console.log(`There was an error`,err))
+      .catch(err => console.log(`There was an error`, err))
   }
 
-  render(){
-
-    return(
-        
-        <section>
-            <h1>Here come the assets</h1>
-            <p>Somos los assets</p>
-            <p>Somos los assets</p>
-            {/* //Aquí irán los grid con los assets */}
-        </section>
+  render() {
+    const { assets } = this.state.assets
+    console.log(assets)
+    return (
+      <section>
+        <h1>Assets</h1>
+        <div className='cards-box'>
+          {assets && assets.map(elm => (
+            <div className='card' key={elm.id}>
+              <ul>
+                <li>{elm.n_number}</li>
+                <li>{elm.t_city}</li>
+                <li>{elm.t_code}</li>
+                <li>{elm.t_street_name}</li>
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
     )
   }
 }
