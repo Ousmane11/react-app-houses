@@ -27,6 +27,13 @@ class Assets extends Component {
     return (
       <section>
         <h2>Assets</h2>
+        {/* //First row with the keys of the assets// */}
+        <div className="first-row-div">
+          <ul className='first-row-ul'>
+        {assets && assets.map(elm => <li>{elm.id}</li> )}
+        </ul>
+        </div>
+        {/* // Mapped assets to render each card with the info of the asset// */}
         <div className='cards-box'>
           {assets && assets.map(elm => (
     

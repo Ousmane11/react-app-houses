@@ -12,7 +12,8 @@ class Entities extends Component {
     this.service = new Services()
   }
 
-  // Gets the entities from the API and then filters those that match with the 'id' of the clicked entity
+  // Gets the entities from the API and then filters those that match with the 'id' of the clicked entity that was clicked
+  //Saves the data in the state to be render adterwards
   componentDidMount(props) {
     this.service
       .getEntities()
@@ -26,12 +27,18 @@ class Entities extends Component {
 
   render() {
     const entities = this.state.entities
-    console.log(entities)
-    return (
+   
+     return (
       <section>
         <h2>Entities from Asset {this.state.id}</h2>
+        <div className='first-row-div'>
+          <ul className='first-row-ul'>
+            {/* // Mapped entities to render the key of each entity in the portal// */}
+        {entities && entities.map(elm => <li>{elm.id}</li> )}
+        </ul>
+        </div>
         <div className='entities-box'>
-          {/* Iteration through the entities to render them */}
+          {/* Iteration through the entities to render them all*/}
           {entities &&
             entities.map(elm => (
               <div className='entities-card' key={elm.id}>

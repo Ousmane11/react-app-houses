@@ -17,74 +17,108 @@ nav {
   align-items: center;
   margin: auto 5vw
 }
-main{
+
+main {
   background-image: url('https://res.cloudinary.com/ousmane11/image/upload/v1571591003/ben-neale-29w9FiMWSr8-unsplash_ikictw.jpg');
-  background-size: auto;
-  
-}
-.house{
-width: 3%;
+  background-size: auto
 }
 
-h1{
+.house {
+  width: 3%;
+}
+
+h1 {
   font-size: 2.5em
 }
-h2{
+
+h2 {
   padding-top: 3%;
   padding-bottom: 5%;
 }
-ul{
+
+ul {
   list-style-type: none;
   text-align: center;
   padding-inline-start: 0px;
 }
 
-a {
-  color: #222222; 
-  text-decoration: none;  /*not underlined link*/
-}
-a:hover {
-  color: white;
-  text-decoration: none;  /*not underlined link*/
-}
-.title a:hover{  /*The Navbar title should not behave like the links on hover, changing color */
-color: #222222;
-text-decoration: none;
+.title a {
+  color: #222222
 }
 
-                                /* //Assets// */
-.cards-box{
+.title a:hover {
+  /*The Navbar title should not behave like the links on hover, changing color */
+  color: #222222;
+  text-decoration: none;
+}
+
+/* //First row with the keys of the objects// */
+.first-row-div {
+  width: 100vw;
+}
+
+.first-row-ul {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.first-row-ul li {
+  margin-left: 1.3%;
+  margin-right: 1.3%;
+}
+
+
+
+/* //Assets view// */
+.cards-box {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-content: center;
 }
-.card{
+
+.card {
   width: 15vw;
   border: 1px solid #222222;
   border-radius: 7px;
   margin: 1%;
-  padding:1%;
+  padding: 1%;
 }
-.card:hover{
+
+.card:hover {
   background-color: #222222;
   color: white;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 
-                                /* //Entities// */
+.card a {
+  color: #222222;
+  text-decoration: none;
+  /*not underlined link*/
+}
 
-.entities-box{
+.card a:hover {
+  color: white;
+  text-decoration: none;
+  /*not underlined link*/
+}
+
+/* //Entities// */
+
+.entities-box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.entities-card{
+
+.entities-card {
   width: 30vw;
   border: 1px solid #222222;
   border-radius: 7px;
   margin: 1%;
-  padding:1%;
+  padding: 1%;
 }
