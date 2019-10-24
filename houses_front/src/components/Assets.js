@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import '../App.css'
 import Services from '../services/Data.services'
+import {Link} from 'react-router-dom'
+
 
 class Assets extends Component {
   constructor() {
@@ -27,14 +29,19 @@ class Assets extends Component {
         <h2>Assets</h2>
         <div className='cards-box'>
           {assets && assets.map(elm => (
+    
             <div className='card' key={elm.id}>
+              <Link to={`/entities/${elm.id}`}>
               <ul>
                 <li>{elm.n_number}</li>
                 <li>{elm.t_city}</li>
                 <li>{elm.t_code}</li>
                 <li>{elm.t_street_name}</li>
               </ul>
+              </Link>
+              
             </div>
+           
           ))}
         </div>
       </section>
