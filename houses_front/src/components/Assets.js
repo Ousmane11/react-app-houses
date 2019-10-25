@@ -11,6 +11,7 @@ class Assets extends Component {
     this.service = new Services()
   }
 
+
   componentDidMount() {
     this.service
       .getAssets()
@@ -23,14 +24,14 @@ class Assets extends Component {
 
   render() {
     const { assets } = this.state.assets
-    console.log(assets)
+    
     return (
       <section>
         <h2>Assets</h2>
         {/* //First row with the keys of the assets// */}
         <div className="first-row-div">
           <ul className='first-row-ul'>
-        {assets && assets.map(elm => <li>{elm.id}</li> )}
+        {assets && assets.map(elm => <li key={elm.id}>{elm.id}</li> )}
         </ul>
         </div>
         {/* // Mapped assets to render each card with the info of the asset// */}

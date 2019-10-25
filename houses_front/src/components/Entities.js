@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import '../App.css'
 import Services from '../services/Data.services'
-import ContextMenu from 'react-context-menu'
+import { ContextMenu, MenuItem, ContextMenuTrigger } from "react-contextmenu"
 
 class Entities extends Component {
   constructor(props) {
@@ -13,7 +13,10 @@ class Entities extends Component {
     this.service = new Services()
   }
 
-
+  
+   handleClick = (e, data) => {
+    console.log(data.target)
+  }
 
   // Gets the entities from the API and then filters those that match with the 'id' of the clicked entity that was clicked
   //Saves the data in the state to be render adterwards
@@ -36,29 +39,38 @@ class Entities extends Component {
      return (
       <section>
         <h2>Entities from Asset {this.state.id}</h2>
-        <div className='first-row-div'>
+        
+        <div id='test'  className='first-row-div'>
           <ul className='first-row-ul'>
             {/* // Mapped entities to render the keys of the entities in the portal// */}
-        {entities && entities.map(elm => <li>{elm.id}</li> )}
+        {entities && entities.map(elm => <li key={elm.id}>{elm.id}</li>)}
         </ul>
         </div>
+        
         <div className='entities-box'>
           {/* Iteration through the entities to render them all*/}
           {entities &&
             entities.map(elm => (
-              
-              <div className='entities-card' key={elm.id}>
-            
-                {/* Iteration through the each entities components to render them */}
-                {Object.entries(elm).map(element => {
+          
+              <div id={`idIs${elm.id}`} className='entities-card' key={elm.id}>
+          <ContextMenuTrigger id={elm.id}>
+            {/* Iteration through the each entities components to render them */}
+            {Object.entries(elm).map((element,idx) => {
                   return (
-                    <p>
+                    <p key={`elm${idx}`}>
                       {element[0]} : {element[1]}
                     </p>
                   )
-                })}
+            })}
+          </ContextMenuTrigger>
+          <ContextMenu id={elm.id}>
+              <MenuItem data={elm.id} onClick={this.handleClick}>
+               Test
+              </MenuItem>
+          </ContextMenu>
               </div>
             ))}
+            
         </div>
       </section>
     )
