@@ -53,7 +53,7 @@ class Entities extends Component {
             entities.map(elm => (
           
               <div id={`idIs${elm.id}`} className='entities-card' key={elm.id}>
-          <ContextMenuTrigger id={elm.id}>
+          <ContextMenuTrigger id={`idIs${elm.id}`}>
             {/* Iteration through the each entities components to render them */}
             {Object.entries(elm).map((element,idx) => {
                   return (
