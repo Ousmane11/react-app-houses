@@ -4,7 +4,7 @@
   "private": true,
   "proxy": "https://6y458uslg3.execute-api.eu-west-3.amazonaws.com",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "http-proxy-middleware": "^0.20.0",
     "react": "^16.10.2",
     "react-contextmenu": "^2.12.0",
